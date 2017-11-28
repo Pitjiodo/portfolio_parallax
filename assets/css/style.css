@@ -1,0 +1,98 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+/*Parallax part 1 with text*/
+.parallax1, .parallax2 {
+  background-attachment: fixed;
+  background-color: #2A2C34;
+  /*background-image: url('../pictures/Hest%20weboptimeret.png');*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  /*opacity: 0.9;*/
+  position: relative;
+}
+
+.parallax_text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
+}
+
+.parallax_text2 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
+}
+
+@media(max-width: 568px){
+  .parallax1 {
+    background-attachment:scroll;
+  }
+}
+
+/*Navigation*/
+#site-nav {
+  position: fixed;
+}
+
+#site-nav a {
+  color: #fff;
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#site-nav ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#site-nav li {
+  display: inline;
+  list-style: none;
+  float: left;
+  font-weight: bold;
+}
+
+#site-nav a:hover {
+  color: #b2b2b2;
+}
+
+.active {
+  font-size: 1.2em;
+}
+
+/*Text_section 1*/
+.section{
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light{
+  background-color: #f4f4f4;
+  color: #666;
+}
