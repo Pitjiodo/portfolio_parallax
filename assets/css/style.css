@@ -4,12 +4,12 @@ body, html {
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 400;
-  line-height: 1.8em;
+  line-height: 2em;
   color: #666;
 }
 
 /*Parallax part 1 with text*/
-.parallax1, .parallax2 {
+.parallax1 {
   background-attachment: fixed;
   background-color: #2A2C34;
   /*background-image: url('../pictures/Hest%20weboptimeret.png');*/
@@ -23,15 +23,25 @@ body, html {
 
 .parallax_text {
   position: absolute;
-  top: 50%;
+  top: 46%;
   width: 100%;
   text-align: center;
   color: #000;
   font-size: 27px;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
   text-transform: uppercase;
   background-color: transparent;
   color: #fff;
+}
+
+/*Parallax part 2*/
+.parallax2 {
+  background-attachment: fixed;
+  background-color: #2A2C34;
+  border-top: solid 10px #fff;
+  min-height: 100%;
+  opacity: 0.9;
+  position: relative;
 }
 
 .parallax_text2 {
