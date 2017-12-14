@@ -1,110 +1,650 @@
 body, html {
-  height: 100%;
-  margin: 0;
-  font-size: 16px;
-  font-family: sans-serif;
-  font-weight: 400;
-  line-height: 2em;
-  color: #666;
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    line-height: 2.6em;
+    color: #666;
 }
 
-/*Parallax part 1 with text*/
-.parallax1 {
-  background-attachment: fixed;
-  background-color: #2A2C34;
-  /*background-image: url('../pictures/Hest%20weboptimeret.png');*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100%;
-  /*opacity: 0.9;*/
-  position: relative;
-}
+/*-------Navigation-------*/
 
-.parallax_text {
-  position: absolute;
-  top: 46%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  font-size: 27px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  background-color: transparent;
-  color: #fff;
-}
-
-/*Parallax part 2*/
-.parallax2 {
-  background-attachment: fixed;
-  background-color: #2A2C34;
-  border-top: solid 10px #fff;
-  min-height: 100%;
-  opacity: 0.9;
-  position: relative;
-}
-
-.parallax_text2 {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  font-size: 27px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  background-color: transparent;
-  color: #fff;
-}
-
-@media(max-width: 568px){
-  .parallax1 {
-    background-attachment:scroll;
-  }
-}
-
-/*Navigation*/
 #site-nav {
-  right: 0.5%;
-  position: fixed;
-  z-index: 10;
+    right: 0.5%;
+    position: fixed;
+    z-index: 1;
 }
 
 #site-nav a {
-  color: #fff;
-  display: block;
-  padding: 14px 16px;
-  text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 14px 16px 0 16px;
+    text-decoration: none;
+    transition: opacity .3s;
 }
 
 #site-nav ul {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #site-nav li {
-  display: inline;
-  list-style: none;
-  float: left;
-  font-weight: bold;
+    display: inline;
+    list-style: none;
+    float: left;
+    font-weight: 900;
 }
 
 #site-nav a:hover {
-  color: #b2b2b2;
+    opacity: .5;
 }
 
-.active {
-  font-size: 1.2em;
+#site-nav .active {
+    font-size: 1.2em;
+    color: #F93300;
 }
 
-/*Text_section 1*/
-.section{
-  text-align: center;
-  padding: 50px 80px;
+
+/*----------------------HOME----------------------*/
+
+/*-------text-------*/
+
+.home-parallax-text, .home-section-2-textbox, .home-section-3-text, .home-section-x-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #fff;
 }
 
-.section-light{
-  background-color: #f4f4f4;
-  color: #666;
+.home-parallax-text, .home-section-x-text {
+    top: 40%;
+}
+
+.home-section-2-textbox {
+    top: 20%;
+}
+
+/*-------Parallax 1-------*/
+
+.home-parallax {
+    background-attachment: fixed;
+    background-color: #2A2C34;
+    background-image: url('../pictures/peter-gellert-katow-multimediedesigner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    /*opacity: 0.9;*/
+    position: relative;
+}
+
+
+/*Scroll down button*/
+
+#scroll-down a span {
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transition: opacity .3s;
+    -webkit-transform: rotate(-45deg);
+    -webkit-animation: homegodown 2s infinite;
+}
+
+.home-scroll-down a {
+    transition: opacity .3s;
+}
+.home-scroll-down a:hover {
+    opacity: .5;
+}
+
+@-webkit-keyframes homegodown {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+/*-------Section 2-------*/
+
+.home-text {
+    margin: 0px 20% 0px 20%;
+    font-weight: 300;
+}
+.home-section-2 {
+    background-attachment: fixed;
+    background-color: #2A2C34;
+    /*border-top: solid 10px #fff;*/
+    min-height: 100%;
+    position: relative;
+}
+.home-section-2-textbox p {
+    text-transform: lowercase;
+    line-height: 230%;
+    text-align: justify;
+}
+
+
+
+/*-------Section x-------*/
+
+.home-section-x {
+    background-attachment: fixed;
+    background-color: #2A2C34;
+    background-image: url('../pictures/land%20in%20the%20sky.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*border-top: solid 10px #fff;*/
+    min-height: 50%;
+    opacity: 0.9;
+    position: relative;
+}
+
+/*-------Section 3-------*/
+
+.home-section-3 {
+    background-color: #2A2C34;
+    /*border-top: solid 10px #fff;*/
+    min-height: 100%;
+    position: relative;
+}
+
+.home-section-3-text {
+    position: relative;
+    height: 200px;
+}
+
+.home-section-3-text h1 {
+    padding: 80px;
+    margin: 0;
+}
+
+/*--box list--*/
+
+.l1, .l2, .l3 {
+   display: flex;
+    margin: 0 20% 0 20%; 
+}
+.l1 div, .l2 div, .l3 div {
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+.l1:hover, .l2:hover, .l3:hover {
+    cursor: pointer;
+}
+
+/*overlay*/
+.overlay p, .overlay h1 {
+    margin: 0 5% 0 5%;
+    line-height: 150%;
+    text-align: center;
+    position: relative;
+}
+.overlay {
+    background-color: aqua;
+    height: 500px;
+    margin: 12.5% 0 0 0;
+    min-width: 100%;
+    z-index: 3;
+    display: flex;
+}
+.overlaylayer {
+    background-color: aliceblue;
+    height: 500px;
+    flex: 1;
+    overflow: scroll;
+}
+
+#overlay1, #overlay12, #overlay13, #overlay21, #overlay22, #overlay23, #overlay31, #overlay32, #overlay33 {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.overflow-picture11, .overflow-picture12, .overflow-picture13, .overflow-picture21, .overflow-picture22, .overflow-picture23, .overflow-picture31, .overflow-picture32, .overflow-picture33 {
+    background-color: #2A2C34;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 500px;
+    flex: 2;
+}
+
+
+/*box list 1*/
+
+.l11 {
+    background-image: url('../pictures/Facebook%20cover%20bjerg%2020-01.png');
+    flex: 1;
+    
+}
+.overflow-picture11 {
+    background-image: url('../pictures/Facebook%20cover%20bjerg%2020-01.png');
+}
+.l12 {
+    background-image: url('../pictures/Hest%20weboptimeret.png');
+    flex: 1;
+}
+.overflow-picture12 {
+    background-image: url('../pictures/Hest%20weboptimeret.png');
+}
+.l13 {
+    background-image: url('../pictures/Koala%20mindre.png');
+    flex: 1;
+}
+.overflow-picture13 {
+    background-image: url('../pictures/Koala%20mindre.png');
+    max-height: inherit;
+    max-width: inherit;
+}
+
+
+/*box list 2*/
+
+.l21 {
+    background-image: url('../pictures/cartoon%20mig%203d%20%5BKonverteret%5D-01.png');
+    flex: 1;
+}
+.overflow-picture21 {
+    background-image: url('../pictures/cartoon%20mig%203d%20%5BKonverteret%5D-01.png');
+}
+.l22 {
+    background-image: url('../pictures/Udklip.PNG');
+    flex: 1;
+}
+.overflow-picture22 {
+    background-image: url('');
+}
+.l23 {
+    background-image: url('../pictures/Shooting_Stardreamstime_xl_97258217.jpg');
+    flex: 1;
+}
+.overflow-picture23 {
+    background-image: url('../pictures/Facebook%20cover%20bjerg%2020-01.png');
+}
+
+/*box list 3*/
+
+.l31 {
+    background-image: url('../pictures/Shooting_Stardreamstime_xl_97258217.jpg');
+    flex: 1;
+}
+.overflow-picture31 {
+    background-image: url('../pictures/Facebook%20cover%20bjerg%2020-01.png');
+}
+.l32 {
+    background-image: url('../pictures/Shooting_Stardreamstime_xl_97258217.jpg');
+    flex: 1;
+}
+.overflow-picture32 {
+    background-image: url('../pictures/Facebook%20cover%20bjerg%2020-01.png');
+}
+.l33 {
+    background-image: url('../pictures/Shooting_Stardreamstime_xl_97258217.jpg');
+    flex: 1;
+}
+.overflow-picture33 {
+    background-image: url('../pictures/Facebook%20cover%20bjerg%2020-01.png');
+}
+
+
+
+
+/*-------footer-------*/
+
+.footer {
+    position: absolute;
+    width: 100%;
+}
+.footer p {
+    background-color: #2A2C34;
+    color: #b2b2b2;
+    margin: 0;
+    font-size: 0.7em;
+    height: 2%;
+    min-width: 100%;
+    z-index: 5;
+}
+
+/*----------------------STYLE----------------------*/
+
+/*-------style top-------*/
+.style {
+    position: fixed;
+}
+.style-top {
+    height: 100px;
+    overflow: hidden;
+    background-color: #2A2C34;
+}
+
+.style-top img {
+    width: 100%;
+    z-index: 1;
+}
+
+/*-------style nav-------*/
+
+.style-nav {
+    right: 0.5%;
+    top: 50px;
+    position: fixed;
+    z-index: 0;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.style-nav a {
+    font-size: 1.6em;
+    color: #999;
+    display: block;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: opacity .3s;
+    text-align: center;
+}
+
+.style-nav li {
+    display: inline;
+    list-style: none;
+    float: left;
+    font-weight: 900;
+}
+
+.style-nav a:hover {
+    color: #eee;
+}
+
+.style-nav .active2 {
+    color: #F93300;
+}
+
+/*-------under part-------*/
+
+.bottom-part {
+    background-color: #E9E9E9;
+    min-height: 100%;
+    margin: 0;
+    z-index: 0;
+}
+
+.bottom-part-textbox h1 {
+    margin-top: 0;
+    padding-top: 180px;
+    text-align: center;
+}
+
+.bottom-part-textbox p {
+    margin: 0 auto;
+    line-height: 230%;
+    text-align: center;
+    font-weight: 300;
+}
+
+.style-text {
+    margin: 0px 20% 0px 20%;
+    padding-top: 20px;
+}
+
+/*cartoonish*/
+.style-img, .style-cartoonish-img {
+    height: 200px;
+    width: auto;
+    right: 0%;
+    bottom: 0%;
+    position: absolute;
+}
+.left-style-cartoonish-img {
+    height: 400px;
+    width: auto;
+    left: 0%;
+    bottom: 0%;
+    position: absolute;
+}
+/*simplisity*/
+.style-img, .style-cartoonish-img {
+    height: 200px;
+    width: auto;
+    right: 0%;
+    bottom: 0%;
+    position: absolute;
+}
+.left-style-cartoonish-img {
+    height: 400px;
+    width: auto;
+    left: 0%;
+    bottom: 0%;
+    position: absolute;
+}
+/*graphic*/
+.style-img, .style-graphic-img {
+    height: 200px;
+    width: auto;
+    right: 0%;
+    bottom: 0%;
+    position: absolute;
+}
+.left-style-graphic-img {
+    height: 200px;
+    width: auto;
+    left: 0%;
+    bottom: 0%;
+    position: absolute;
+}
+/*----------------------ABOUT----------------------*/
+
+.about-top {
+    background-color: #2A2C34;
+    background-image: url('../pictures/art1_Tegnebr%C3%A6t%201.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 98%;
+    /*opacity: 0.9;*/
+    position: relative;
+}
+.about-bot {
+    background-color: #E9E9E9;
+    min-height: 80%;
+    position: relative;
+    max-width: 100%;
+}
+
+/*Diamond picture*/
+.diamond {
+    position: absolute;
+    width: 15%;
+    height: 0%;
+    transform: rotate(45deg);
+    overflow: hidden;
+    top: 30%;
+    left: 38%
+    
+}
+.diamond img {
+    transform: rotate(-45deg);
+    
+}
+
+/*text*/
+
+.peter {
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    top: 5%;
+    left: 47%;
+}
+.gellert {
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    top: 47%;
+    left: 16%;
+}
+.katow {
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    top: 47%;
+    right: 16%;
+}
+.pitjiodo {
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    bottom: 5%;
+    left: 47%;
+}
+
+/*bot text and picture*/
+.about-bot h1, .about-bot p {
+    margin: 0;
+}
+
+.about-bot h1 {
+    padding: 100px 0 0 100px;
+}
+
+.about-bot-text {
+    margin: 0px 800px 0px 100px;
+    font-weight: 300;
+}
+
+.about-bot p {
+    text-transform: lowercase;
+    line-height: 230%;
+    text-align: justify;
+    padding: 10px 0 20px 0;
+}
+
+.about-bot-img {
+    right: 10%;
+    top: 100px;
+    position: absolute;
+}
+.about-bot-img img {
+    height: 500px;
+    width: 500px;
+    border: solid #2A2C34;
+}
+
+.peter-gellert-katow #active {
+    color: #F93300;
+}
+/*----------------------Contact----------------------*/
+
+.contact {
+    position: fixed;
+    overflow: hidden;
+    height: 100px;
+    background-color: fuchsia;
+    z-index: 2;
+}
+.contact-top {
+    height: 100px;
+    overflow: hidden;
+    background-color: #2A2C34;
+}
+
+.contact-top img {
+    width: 100%;
+    z-index: 1;
+}
+
+.contact-bottom-part {
+    background-color: #E9E9E9;
+    min-height: 100%;
+    min-width: 100%;
+    position: relative;
+}
+
+.social-media {
+    position: absolute;
+    margin: 0 0 0 80px;
+    top: 200px;
+}
+.social-media h1 {
+    margin-left: -20px;
+}
+.social-media a, .phone a, .email a {
+    color: #666;
+}
+.email {
+    position: absolute;
+    margin: 0;
+    top: 200px;
+    right: 5%;
+}
+
+.phone {
+    position: absolute;
+    margin: 0 0 0 80px;
+    top: 550px;
+}
+.phone h1 {
+    margin-left: -20px;
+}
+
+.contact-form {
+    position: absolute;
+    background-color: #2A2C34;
+    margin: 0;
+    top: 420px;
+    right: 5%;
+    height: 300px;
+    width: 600px;
+}
+.contact-form1 {
+    position: absolute;
+    background-color: #2A2C34;
+    margin: 0;
+    top: 360px;
+    right: 5%;
+    height: 50px;
+    width: 600px;
+}
+.contact-form2 {
+    position: absolute;
+    background-color: #2A2C34;
+    margin: 0;
+    top: 300px;
+    right: 5%;
+    height: 50px;
+    width: 600px;
+}
+.contact-text {
+    position: absolute;
+    color: #b2b2b2;
+    margin: 0;
+    top: 380px;
+    right: 50px;
+    height: 50px;
+    width: 600px;
+    font-size: 3em;
+    transform: rotate(-45deg)
 }
